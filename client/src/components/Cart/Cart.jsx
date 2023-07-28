@@ -6,7 +6,6 @@ import { removeItem, resetCart } from '../../redux/cartReducer';
 import { loadStripe } from '@stripe/stripe-js';
 import { makeRequest } from '../../makeRequest';
 const Cart = () => {
-  const imgUrl = 'https://shopy-server-70ge.onrender.com';
   const dispatch=useDispatch();
   const products = useSelector((state) => state.cart.products);
 
@@ -38,7 +37,7 @@ const Cart = () => {
       <h1>Products in your cart</h1>
       {products?.map((item) => (
         <div className="item" key={item.id}>
-          <img src={imgUrl + item.img} alt="" />
+          <img src={item.img} alt="" />
           <div className="details">
             <h1>{item.title}</h1>
             <p>{item.desc?.substring(0, 100)}</p>

@@ -10,14 +10,13 @@ import { useDispatch } from 'react-redux';
 import { addToCart } from '../../redux/cartReducer';
 
 const Product = () => {
-  const imgUrl = 'http://localhost:1337';
   const id = useParams().id;
   const [selectedImg, setSelectedImg] = useState('img');
   const [quantity, setQuantity] = useState(1);
 
   const dispatch = useDispatch();
   const { data, loading, error } = useFetch(`/products/${id}?populate=*`);
-
+  console.log('data',data)
   return (
     <div className="product">
       {loading ? (
@@ -27,12 +26,12 @@ const Product = () => {
           <div className="left">
             <div className="images">
               <img
-                src={imgUrl + data?.attributes?.img?.data?.attributes?.url}
+                src={data?.attributes?.img?.data?.attributes?.url}
                 alt=""
                 onClick={(e) => setSelectedImg('img')}
               />
               <img
-                src={imgUrl + data?.attributes?.img2?.data?.attributes?.url}
+                src={data?.attributes?.img2?.data?.attributes?.url}
                 alt=""
                 onClick={(e) => setSelectedImg('img2')}
               />
@@ -40,7 +39,7 @@ const Product = () => {
             <div className="mainImg">
               <img
                 src={
-                  imgUrl + data?.attributes[selectedImg]?.data?.attributes?.url
+                  data?.attributes[selectedImg]?.data?.attributes?.url
                 }
                 alt=""
               />

@@ -3,20 +3,18 @@ import "./Card.scss";
 import { Link } from "react-router-dom";
 
 const Card = ({ item }) => {
-  const imgUrl = 'https://shopy-server-70ge.onrender.com';
- console.log("",imgUrl)
   return (
     <Link className="link" to={`/product/${item.id}`}>
       <div className="card">
         <div className="image">
           {item?.attributes.isNew && <span>New Season</span>}
           <img
-            src={imgUrl + item.attributes.img.data.attributes.url}
+            src={item.attributes.img.data.attributes.url}
             alt=""
             className="mainImg"
           />
           <img
-            src={imgUrl + item.attributes.img2.data.attributes.url}
+            src={item.attributes.img2.data.attributes.url}
             alt=""
             className="secondImg"
           />
