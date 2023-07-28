@@ -6,7 +6,7 @@ import { removeItem, resetCart } from '../../redux/cartReducer';
 import { loadStripe } from '@stripe/stripe-js';
 import { makeRequest } from '../../makeRequest';
 const Cart = () => {
-  const imgUrl = 'http://localhost:1337';
+  const imgUrl = 'https://shopy-server-70ge.onrender.com';
   const dispatch=useDispatch();
   const products = useSelector((state) => state.cart.products);
 

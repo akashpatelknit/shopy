@@ -3,8 +3,8 @@ import "./Card.scss";
 import { Link } from "react-router-dom";
 
 const Card = ({ item }) => {
-  const imgUrl = 'http://localhost:1337';
-
+  const imgUrl = 'https://shopy-server-70ge.onrender.com';
+ console.log("",imgUrl)
   return (
     <Link className="link" to={`/product/${item.id}`}>
       <div className="card">
