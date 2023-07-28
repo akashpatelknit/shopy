@@ -54,3 +54,27 @@
     }
   }
 }
+@media screen and (max-width:650px){
+  .footer{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    .top{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    .one{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .two{
+     display: flex;
+     gap: 1rem;
+     justify-content: center;
+     align-items: center;
+    }
+    }
+
+  }
+}

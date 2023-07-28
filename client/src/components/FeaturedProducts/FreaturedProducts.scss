@@ -24,3 +24,18 @@
     gap: 50px;
   }
 }
+@media screen and (max-width:650px){
+.featuredProducts{
+margin: auto;
+}
+  .top{
+   display: flex;
+   flex-direction: column;
+  }
+    .bottom{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+  }
+}

@@ -15,14 +15,14 @@ const products = useSelector((state) => state.cart.products);
     <div className="navbar">
       <div className="wrapper">
         <div className="left">
-          <div className="item">
+          {/* <div className="item">
             <img src="" alt="" />
             <KeyboardArrowDownIcon />
           </div>
           <div className="item">
             <span>INR</span>
             <KeyboardArrowDownIcon />
-          </div>
+          </div> */}
           <div className="item">
             <Link className="link" to="/products/1">
               Men
@@ -41,7 +41,7 @@ const products = useSelector((state) => state.cart.products);
         </div>
         <div className="center">
           <Link className="link" to="/">
-            LAMASTORE
+            SHOPY.com
           </Link>
         </div>
         <div className="right">
